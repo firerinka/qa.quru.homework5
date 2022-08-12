@@ -25,7 +25,7 @@ public class SoftAssertionsTest {
         $("[data-filterable-for=wiki-pages-filter]").shouldHave(text("SoftAssertions"));
 
         $("#wiki-pages-filter").setValue("SoftAssertions");
-        $("#wiki-body").find(byText("Soft assertions")).click();
+        $("[data-filterable-for=wiki-pages-filter]").find(byText("SoftAssertions")).click();
 
         $("#wiki-wrapper h1").shouldHave(text("SoftAssertions"));
         $("#wiki-body").shouldHave(text("Using JUnit5 extend test class:"));
